@@ -1,0 +1,108 @@
+20 command line dan hasilnya: 
+
+1). mkdir latihan -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1>mkdir latihan
+2). cd latihan -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1>cd latihan
+3). echo 20 command line dan hasilnya > cmdline.txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>echo 20 command line dan hasilnya > cmdline.txt
+4). dir -> Volume in drive C is Windows
+ Volume Serial Number is 633B-4E80
+
+ Directory of C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan
+
+25/02/2020  05:16    <DIR>          .
+25/02/2020  05:16    <DIR>          ..
+25/02/2020  05:18               210 cmdline.txt
+               1 File(s)            210 bytes
+               2 Dir(s)  80.868.831.232 bytes free
+
+C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>
+
+5). type cmdline.txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>type cmdline.txt
+20 command line dan hasilnya
+
+6). rename cmdline.txt commandline.txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>rename cmdline.txt commandline.txt
+7). copy commandline.txt C:\Users\hp\Downloads -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>copy commandline.txt C:\Users\hp\Downloads
+        1 file(s) copied.
+
+8). fc /a commandline.txt C:\Users\hp\Downloads\commandline.txt -> Comparing files commandline.txt and C:\USERS\HP\DOWNLOADS\COMMANDLINE.TXT
+	***** commandline.txt
+	andline.txt
+	...
+	8.
+	***** C:\USERS\HP\DOWNLOADS\COMMANDLINE.TXT
+	andline.txt
+	7.
+	*****
+
+9). date /t -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>date /t
+25/02/2020
+
+10). find "20 command" commandline.txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>find "20 command" commandline.txt
+
+	---------- COMMANDLINE.TXT
+	20 command line dan hasilnya
+	3). echo 20 command line dan hasilnya > cmdline.txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>echo 20 command line dan hasilnya > cmdline.txt
+	20 command line dan hasilnya
+11). del commandline.txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>del commandline.txt
+12). chdir C:\Users\hp\Downloads -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>chdir C:\Users\hp\Downloads
+
+C:\Users\hp\Downloads>
+
+13). move commandline.txt C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan -> C:\Users\hp\Downloads>move commandline.txt C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan
+        1 file(s) moved.
+14). whoami -> C:\Users\hp\Downloads>whoami
+laptop-7i8d04ha\hp
+
+15). time /t -> C:\Users\hp\Downloads>time /t
+06:03
+
+16). replace C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan\commandline.txt -> C:\Users\hp\Downloads>replace C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan\commandline.txt
+Replacing C:\Users\hp\Downloads\commandline.txt
+
+17.) tree C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1 -> Folder PATH listing for volume Windows
+Volume serial number is 633B-4E80
+C:\USERS\HP\DOWNLOADS\PRAXIS-ACADEMY\KEMAMPUAN-DASAR-1
+└───latihan
+
+18). icacls C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan\commandline.txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan\commandline.txt NT AUTHORITY\SYSTEM:(F)
+                                                                               BUILTIN\Administrators:(F)
+                                                                               LAPTOP-7I8D04HA\hp:(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+19). ping praxisacademy.id -> Pinging praxisacademy.id [103.247.11.203] with 32 bytes of data:
+Reply from 103.247.11.203: bytes=32 time=13ms TTL=58
+Reply from 103.247.11.203: bytes=32 time=13ms TTL=58
+Reply from 103.247.11.203: bytes=32 time=12ms TTL=58
+Reply from 103.247.11.203: bytes=32 time=13ms TTL=58
+
+Ping statistics for 103.247.11.203:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 12ms, Maximum = 13ms, Average = 12ms
+
+20). tracert praxisacademy.id -> Tracing route to praxisacademy.id [103.247.11.203]
+over a maximum of 30 hops:
+
+  1    <1 ms    <1 ms    <1 ms  1.100.168.192.in-addr.arpa [192.168.100.1]
+  2     8 ms     9 ms     8 ms  1.subnet125-163-144.speedy.telkom.net.id [125.163.144.1]
+  3     2 ms     2 ms     3 ms  197.1.160.125.in-addr.arpa [125.160.1.197]
+  4     2 ms     1 ms     1 ms  180.252.3.241
+  5    12 ms    11 ms    11 ms  94.172.30.103.in-addr.arpa [103.30.172.94]
+  6    12 ms    12 ms    11 ms  3.172.30.103.in-addr.arpa [103.30.172.3]
+  7     *        *        *     Request timed out.
+  8    12 ms    11 ms    11 ms  iix82-1.rumahweb.com [103.247.11.203]
+
+Trace complete.
+21). assoc .txt -> C:\Users\hp\Downloads\praxis-academy\kemampuan-dasar-1\latihan>assoc .txt
+.txt=txtfile
+
+22). netstat -e -> Interface Statistics
+
+                           Received            Sent
+
+Bytes                    2012778668       127273328
+Unicast packets             1547116         1103340
+Non-unicast packets           10884            2624
+Discards                       8268               0
+Errors                            0               0
+Unknown protocols                 0
