@@ -1,4 +1,4 @@
-Penjelasan singkat
+Penjelasan singkat latihan 01-01
 
 1. Hello world
 semua applikasi wajib memiliki main method atau main function, karena method inilah yang pertama kali dipanggil dan 
