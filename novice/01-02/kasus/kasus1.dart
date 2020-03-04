@@ -2,7 +2,8 @@ main() {
   List numbers = [7, 26, 5, 4, 15, 2, 1];
   List numbers2 = [7, 1, 5, 120, 13, 15, 4];
 
-  var max = maximumValue(numbers, 6, 4);
+  var max = maximumValue(numbers, 1, 4);
+  // var max2 = maximumValue2(numbers, 1, 4);
   var same = sameNumber(numbers, numbers2);
   var maxAndMin = maxMinValue(numbers2);
   var indexAndValue = indexSameWithValue(numbers, 0);
@@ -10,6 +11,7 @@ main() {
   var backInsertion = backwardInsertionSort(numbers);
 
   print(max);
+  // print(max2);
   print(same);
   print('Max value is ${maxAndMin[0]}, and min value is ${maxAndMin[1]}');
   print('The value of array at index $indexAndValue same with its index');
@@ -22,6 +24,15 @@ int maximumValue(List numbers, int index1, int index2) {
   int max = numbers[index1];
   return numbers[index2] > max ? numbers[index2] : max;
 }
+
+/* int maximumValue2(List numbers, int index1, int index2) {
+  var max = index1;
+  for(int i = index1; i < index2; i++ ) {
+    if(numbers[i] > max) max = i;
+  }
+
+  return numbers[max];
+} */
 
 // find same number between two array
 int sameNumber(List numbers, List numbers2) {
