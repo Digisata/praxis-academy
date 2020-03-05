@@ -9,7 +9,7 @@ main() {
   var indexAndValue = indexSameWithValue(numbers, 0);
   var insertion = insertionSort(numbers2);
   var backInsertion = backwardInsertionSort(numbers);
-
+  
   print(max);
   // print(max2);
   print(same);
@@ -38,19 +38,19 @@ int maximumValue(List numbers, int index1, int index2) {
 int sameNumber(List numbers, List numbers2) {
   for (int i = 0; i < numbers.length; i++) {
     for (int j = 0; j < numbers.length; j++) {
-      if (numbers[i] == numbers2[j]) return numbers[i];      
+      if (numbers[i] == numbers2[j]) return numbers[i];
     }
     // if(numbers[i] == numbers2[i]) return numbers[i];
   }
 }
 
-// find maximum and minimun value 
+// find maximum and minimun value
 List maxMinValue(List numbers) {
   List result = [];
   var max = numbers[0], min = numbers[0];
-  for(int i in numbers) {
-      if(max < i) max = i;
-      if(min > i) min = i;
+  for (int i in numbers) {
+    if (max < i) max = i;
+    if (min > i) min = i;
   }
   result.add(max);
   result.add(min);
@@ -59,15 +59,15 @@ List maxMinValue(List numbers) {
 
 // return is index same as its value
 int indexSameWithValue(List numbers, int index) {
-  if(index == numbers[index]) return index;
+  if (index == numbers[index]) return index;
 }
 
 // insertion sort
 List insertionSort(List numbers) {
-  for(int i = 1; i < numbers.length; i++) {
+  for (int i = 1; i < numbers.length; i++) {
     var key = numbers[i];
     var j = i;
-    while(j > 0 && numbers[j - 1] > key) {
+    while (j > 0 && numbers[j - 1] > key) {
       numbers[j] = numbers[j - 1];
       j = j - 1;
     }
@@ -79,10 +79,10 @@ List insertionSort(List numbers) {
 
 // backward insertion sort
 List backwardInsertionSort(List numbers) {
-  for(int i = numbers.length - 1; i >= 0; --i) {
+  for (int i = numbers.length - 1; i >= 0; --i) {
     var key = numbers[i];
     var j = i + 1;
-    while(j < numbers.length && key > numbers[j]) {
+    while (j < numbers.length && key > numbers[j]) {
       numbers[j - 1] = numbers[j];
       j++;
     }
