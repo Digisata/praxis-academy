@@ -24,6 +24,29 @@ Await adalah kata kunci yang ada pada dart yang hanya bisa di terapkan pada asyn
 var three = await threeCount();
 print(three);
 
+4. Stream
+Stream adalah sebuah class yang memungkinkan kita mendapatkan potongan-potongan data satu per satu tanpa harus menunggu semua data nya terkumpul. Tidak seperti class future yang mereturn sekali ketika operasinya telah selesai, class stream dapat mereturn masing-masing data secara individu dan mengeksekusi operasi selanjutnya.
+
+// sebuah stream yang men trigger setiap perubahan yang terjadi pada list numbers 
+List<int> numbers = [1, 2, 5, 7, 2, 7, 4];
+Stream stream = testStream(numbers);
+
+5. Listen
+Listen merupakan sebuah method yang memungkinkan sebuah stream untuk mendapatkan setiap perubahan yang terjadi, sehingga dari perubahan-perubahan yang terjadi tersebut bisa di lakukan suatu aksi tertentu.
+
+// sebuah stream yang melisten return value dan kemudian mencetak hasilnya
+stream.listen((value) => print(value));
+
+6. Yield
+Kata kuncu yield sama seperti halnya kata kunci return, bedanya ialah jika return di eksekusi maka operasi nya selesai dan valuenya di kembalikan ke class / method yang memanggilnya, sedangkan yield ketika dieksekusi dia mengembalikan valuenya tetapi tidak menghentikan proses yang terjadi di tempat dia dieksekusi.
+
+/* method testStream dengan kata kunci yield yang berfungsi untuk mereturn value dari setiap iterasi yang terjadi berupa Stream<int> ke class / method yang memanggil testSream lalu kembali melakukan iterasi sampai kondiinya bernilai false. */
+Stream<int> testStream(List<int> numbers) async* {
+  for (int i in numbers) yield i;
+}
+
+
+
 
 
 

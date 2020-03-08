@@ -40,19 +40,29 @@ Future<void> main() async {
   } catch (e) {
     print('The error message is ${e.toString()}');
   } */
-
-  await showScore();
-  var stream = countStream(10);
+  await showScore().then((value) {
+    print(value);
+  }).catchError((err) => print(err));
+  
+  /* var stream = countStream(10);
   var sum = await sumStream(stream);
   print(sum);
 
   Future<int>.delayed(const Duration(seconds: 3), () { return 100;}).
   then((value) {
     print(value);
-  });
+  }); */
+
+  // stream
+  List<int> numbers = [1, 2, 5, 7, 2, 7, 4];
+  Stream stream = testStream(numbers);
+  stream.listen((value) => print(value));
 
   print('waiting for the result,....');
-  
+}
+
+Stream<int> testStream(List<int> numbers) async* {
+  for (int i in numbers) yield i;
 }
 
 Future<int> sumStream(Stream<int> stream) async {
@@ -77,9 +87,10 @@ Stream<int> countStream(int to) async* {
   }
 }
 
-Future<void> showScore() async {
+Future<String> showScore() async {
   var score = await getScore();
-  print('your score is $score');
+  return 'your score is $score';
+  // throw Exception('An error happened');
 }
 
 Future<int> getScore() async =>
