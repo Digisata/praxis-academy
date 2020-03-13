@@ -23,6 +23,7 @@ class RandomWords extends StatefulWidget {
 }
 
 class _RandomWordsState extends State<RandomWords> {
+  var desc = 'Generator from plus sign';
   final _suggestions = <WordPair>[];
   final Set<WordPair> _saved = Set<WordPair>();
   final _biggerFont = const TextStyle(fontSize: 20.0);
@@ -31,7 +32,7 @@ class _RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: Text('Startup Name ' + desc),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
         ],
@@ -86,7 +87,10 @@ class _RandomWordsState extends State<RandomWords> {
       final List<Widget> divided =
           ListTile.divideTiles(context: context, tiles: tiles).toList();
           return Scaffold(
-            appBar: AppBar(title: Text('Saved suggestion'),),
+            appBar: AppBar(
+              title: Text('Saved suggestion'),
+              centerTitle: true,
+              ),
             body: ListView(children: divided),
           );
     }));
