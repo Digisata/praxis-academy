@@ -4,9 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+    
+
+    
         {
-            "name": "Dart",
-            "program": "bin/main.dart",
+            "name": "Multilingual Weather App",
+            "program": "/home/nopal/Documents/praxis-academy/novice/04-03/kasus/multilingual_weather_app/lib/main.dart",
             "request": "launch",
             "type": "dart"
         }

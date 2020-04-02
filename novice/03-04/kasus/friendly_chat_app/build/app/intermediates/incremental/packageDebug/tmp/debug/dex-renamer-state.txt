@@ -1,4 +1,0 @@
-#Sat Mar 28 10:58:54 WIB 2020
-base.0=/home/hanif/Downloads/test/my_test_app/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

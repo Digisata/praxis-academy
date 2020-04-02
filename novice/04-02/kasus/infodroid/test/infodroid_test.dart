@@ -17,7 +17,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await Infodroid.platformVersion, '42');
+  test('getPlatformInfo', () async {
+    expect(await Infodroid.platformInfo, '42');
   });
 }
