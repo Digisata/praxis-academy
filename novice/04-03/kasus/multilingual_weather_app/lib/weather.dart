@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/foundation.dart';
+import 'dart:developer' as developer;
 
 class Weather extends ChangeNotifier {
   String _cityName = 'Jogja';
@@ -10,11 +11,13 @@ class Weather extends ChangeNotifier {
 
   set cityName(String cityName) {
     _cityName = cityName;
+    developer.log('set city name', name: 'my.app.category');
     notifyListeners();
   }
 
   set temperature(double temperature) {
     _temperature = temperature;
+    developer.log('set temperature', name: 'my.other.category');
     notifyListeners();
   }
 }

@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: [const Locale('en'), const Locale('id')],
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.blue),
       home: WeatherPage(),
     );
